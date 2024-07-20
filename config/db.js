@@ -8,10 +8,10 @@ main().catch((err) => console.log(err));
 
 async function main() {
   await mongoose.connect(
-    `mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@cluster0.rvt6uwq.mongodb.net/?retryWrites=true&w=majority`
+    `${process.env.DATABASE_URL}`
   );
 
-  console.log("Conectado com sucesso!");
+  console.log("MongoDB conectado com sucesso!");
 }
 
 module.exports = main;

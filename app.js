@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 require("dotenv").config();
-require("./db");
+require("./config/db");
 
 const port = process.env.PORT || 3000;
 
